@@ -1,0 +1,15 @@
+import turtle
+
+def draw_square(turtle, side_length):
+    for _ in range(4):
+        turtle.forward(side_length)
+        turtle.right(90)
+
+screen = turtle.Screen()
+pen = turtle.Turtle()
+
+draw_square(pen, 100)
+# print(side_length) # This line would cause an error
+screen.mainloop()
+
+# Should be a square
