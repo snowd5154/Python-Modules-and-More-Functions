@@ -1,0 +1,18 @@
+import turtle
+
+# Global scope
+screen = turtle.Screen()
+pen = turtle.Turtle()
+global_color = "red"
+
+def change_color():
+  # Local scope
+  global global_color # Use the global variable
+  global_color = "blue"
+  pen.color(global_color)
+
+pen.color(global_color) # Use the global variable
+pen.forward(100)
+change_color()
+pen.forward(100)
+screen.mainloop()
