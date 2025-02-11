@@ -1,0 +1,11 @@
+import turtle
+
+# create turtle object
+pen = turtle.Turtle()
+
+# use turtle functions
+pen.forward(100)
+pen.left(90)
+pen.forward(100)
+
+turtle.done()
