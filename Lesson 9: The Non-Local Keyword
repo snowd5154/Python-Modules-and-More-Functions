@@ -1,0 +1,13 @@
+def outer_function():
+    x = "outer"
+    def inner_function():
+        nonlocal x
+        x = "inner"
+        print("Inner:", x)
+    inner_function()
+    print("Outer:", x)
+
+outer_function()
+# Expected output:
+# Inner: inner
+# Outer: inner
