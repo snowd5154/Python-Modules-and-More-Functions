@@ -1,0 +1,19 @@
+import turtle
+
+def draw_shape(turtle, sides, length):
+    """Draws a regular polygon with the given number of sides and length."""
+    def draw_side():
+        turtle.forward(length)
+        turtle.left(360 / sides)
+
+    for _ in range(sides):
+        draw_side()
+
+screen = turtle.Screen()
+pen = turtle.Turtle()
+
+draw_shape(pen, 4, 50)  # Draw a square
+draw_shape(pen, 6, 30)  # Draw a hexagon
+draw_shape(pen, 3, 60)  # Draw a triangle
+
+screen.mainloop()
