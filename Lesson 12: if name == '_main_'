@@ -1,0 +1,15 @@
+import turtle
+
+def draw_square(turtle, size):
+    for _ in range(4):
+        turtle.forward(size)
+        turtle.left(90)
+
+if __name__ == '__main__':
+    screen = turtle.Screen()
+    pen = turtle.Turtle()
+    pen.speed(0) # Set the drawing speed (0 is the fastest)
+    
+    draw_square(pen, 100)
+    
+    screen.mainloop() # Keep the window open until it's closed manually
