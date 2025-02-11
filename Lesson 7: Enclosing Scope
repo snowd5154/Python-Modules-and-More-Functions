@@ -1,0 +1,32 @@
+import turtle
+
+def draw_shape(turtle, sides, length):
+    def set_color(color):
+        nonlocal turtle
+        turtle.color(color)
+    
+    if sides == 3:
+        set_color("red")
+    elif sides == 4:
+        set_color("blue")
+    else:
+        set_color("green")
+    
+    for _ in range(sides):
+        turtle.forward(length)
+        turtle.left(360 / sides)
+
+screen = turtle.Screen()
+pen = turtle.Turtle()
+
+draw_shape(pen, 3, 100)
+pen.penup()
+pen.goto(150, 0)
+pen.pendown()
+draw_shape(pen, 4, 80)
+pen.penup()
+pen.goto(0, -150)
+pen.pendown()
+draw_shape(pen, 5, 60)
+
+screen.mainloop()
