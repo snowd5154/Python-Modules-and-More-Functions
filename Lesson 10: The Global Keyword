@@ -1,0 +1,20 @@
+import turtle
+
+# Global variable
+screen = turtle.Screen()
+pen = turtle.Turtle()
+
+def setup_screen():
+    global screen
+    screen.setup(width=600, height=600)
+    screen.title("Turtle Graphics")
+
+def draw_square():
+    global pen
+    for _ in range(4):
+        pen.forward(100)
+        pen.left(90)
+
+setup_screen()
+draw_square()
+screen.mainloop()
