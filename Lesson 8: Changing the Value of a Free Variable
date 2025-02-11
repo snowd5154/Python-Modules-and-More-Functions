@@ -1,0 +1,24 @@
+import turtle
+
+# Global variable
+side_length = 50
+
+def draw_square():
+    global side_length  # Declare that we are using the global variable
+    for _ in range(4):
+        turtle.forward(side_length)
+        turtle.right(90)
+    side_length += 10  # Modify the global variable
+
+# Draw the first square
+draw_square()
+
+# Move the turtle to a new position
+turtle.penup()
+turtle.goto(100, 100)
+turtle.pendown()
+
+# Draw the second square with the modified side length
+draw_square()
+
+turtle.done()
