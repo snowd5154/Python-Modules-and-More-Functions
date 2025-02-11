@@ -1,0 +1,6 @@
+from turtle import Turtle, Screen
+
+tess = Turtle()
+screen = Screen()
+tess.forward(100)
+screen.mainloop()
